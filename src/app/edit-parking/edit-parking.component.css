@@ -1,0 +1,24 @@
+
+
+.post-test{
+    margin-left: 100px;
+    width: 400px;
+    margin-top: 50px;
+}
+.usr-inp{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.submit{
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border:none;
+    background-color: rgb(22, 36, 49);
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    outline:none;
+}
