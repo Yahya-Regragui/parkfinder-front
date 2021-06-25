@@ -1,26 +1,28 @@
 
 
 <div class="reservations">
+    <h1>All Reservations</h1>
     <div class="reservationCard" *ngFor='let reservation of reservations$ '>
-        <div class="p-content">
-            
-            <div class="p-info">
-                <div class="p-title" >{{reservation.parkingId}}</div>
-                <div class="p-desc">{{reservation.date}}</div>
-                
-                
-            </div>
-        </div>
-        <div class="loc-spots">
-            <div >{{reservation.arrivalTime}}</div>
-                <mat-divider [vertical]="true"></mat-divider>
-            <div >{{reservation.departureTime}}</div>
-        </div>
-        <div class="btns">
-            <button (click)='deleteParking(parking._id)' class="btn">Delete</button>
-            <button  class="btn">Edit</button>
-        </div>
-        
+        <div class="card-content">
 
+        
+            <div class="p-content">
+                
+                <div class="p-info">
+                    <div class="p-title" >{{reservation.username}}</div>
+                    <div class="p-desc">Reservation Date: {{reservation.date}}</div>
+                    
+                    
+                </div>
+            </div>
+            <div class="loc-spots">
+                <div >Arrival Time : {{reservation.arrivalTime}}</div>
+                    <mat-divider [vertical]="true"></mat-divider>
+                <div >Departure time: {{reservation.departureTime}}</div>
+            </div>
+         </div>
+        
+        
+        <button class="btn">Delete</button>
     </div>
 </div>

@@ -66,9 +66,7 @@
     width: 20%;
 
 }
-.btns{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 50%
+#unblock{
+    background-color: green;
+    margin-left: 10px;
 }

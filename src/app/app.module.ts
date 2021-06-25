@@ -15,7 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatTabsModule } from '@angular/material/tabs'
 import { MatDividerModule } from '@angular/material/divider';
-import { ParkingsComponent } from './parkings/parkings.component'
+import { ParkingsComponent } from './parkings/parkings.component';
+import { UsersComponent } from './users/users.component'
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ParkingsComponent } from './parkings/parkings.component'
     LoginComponent,
     ReservationsComponent,
     ParkingsComponent,
+    UsersComponent,
     
   ],
   imports: [

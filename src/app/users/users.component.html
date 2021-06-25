@@ -1,0 +1,29 @@
+
+
+<div class="reservations">
+    <h1>All Users</h1>
+    <div class="reservationCard" *ngFor='let user of users$ '>
+        <div class="card-content">
+
+        
+            <div class="p-content">
+                
+                <div class="p-info">
+                    <div class="p-title" >{{user.username}}</div>
+                    <div class="p-desc">Email: {{user.email}}</div>
+                    
+                    
+                </div>
+            </div>
+            <div class="loc-spots">
+                <div >Phone: {{user.phone}}</div>
+                    <mat-divider [vertical]="true"></mat-divider>
+                <div >Account Status: <strong *ngIf = 'user.isBlocked '>Blocked</strong> <strong *ngIf = '!user.isBlocked '>Activated</strong> </div>
+            </div>
+         </div>
+        
+        
+        <button *ngIf = '!user.isBlocked 'class="btn">Block</button>
+        <button *ngIf = 'user.isBlocked ' class="btn" id="unblock">unblock</button>
+    </div>
+</div>
