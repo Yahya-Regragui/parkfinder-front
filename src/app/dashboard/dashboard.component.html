@@ -51,17 +51,24 @@
 </div> -->
 
 <div class="container">
-    <mat-tab-group mat-align-tabs="center">
+    <mat-toolbar>
+        <h1 class="logo">Park<span>Finder</span> </h1>
+        <button class="logout" (click)="_authService.logoutUser()" >Log out</button>
+    </mat-toolbar>
+    <mat-tab-group mat-align-tabs="center"  animationDuration="0ms">
+
         <mat-tab  label="Parkings" >
             <app-parkings></app-parkings>
-            
         </mat-tab>
+
         <mat-tab label="Reservations">
              <app-reservations></app-reservations>
-             </mat-tab>
+        </mat-tab>
+        
         <mat-tab label="Users"> 
             <app-users></app-users>
         </mat-tab>
-      </mat-tab-group>
+
+    </mat-tab-group>
     
 </div>

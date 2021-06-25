@@ -13,7 +13,10 @@ export class UsersComponent implements OnInit {
   users$: Parking[];
   apiUrl:string = 'http://localhost:3000/user/admin/users';
 
-  status:string;
+  blockApiUrl:string = 'http://localhost:3000/user/admin/block/';
+  activateApiUrl:string = 'http://localhost:3000/user/admin/activate/';
+
+  userId:string;
 
 
   headers = new HttpHeaders().set('Content-Type', 'application/json;charset=utf-8');
@@ -31,6 +34,23 @@ export class UsersComponent implements OnInit {
 
   }
 
+  
+  blockUser(userId){
+    this.http.put<any>(this.blockApiUrl + userId , "isBlocked: true")
+    .subscribe( res => {
+      console.log(res);
+    })
+    window.location.reload();
+
+  }
+
+  activateUser(userId){
+    this.http.put<any>(this.activateApiUrl + userId , "isBlocked: false")
+    .subscribe( res => {
+      console.log(res);
+    })
+    window.location.reload();
+  }
 
 
 

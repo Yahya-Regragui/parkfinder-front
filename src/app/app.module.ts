@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatTabsModule } from '@angular/material/tabs'
 import { MatDividerModule } from '@angular/material/divider';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { ParkingsComponent } from './parkings/parkings.component';
 import { UsersComponent } from './users/users.component'
 
@@ -41,7 +42,8 @@ import { UsersComponent } from './users/users.component'
     ]),
     BrowserAnimationsModule,
     MatTabsModule,
-    MatDividerModule
+    MatDividerModule,
+    MatToolbarModule
   ],
   providers: [AuthService,
   {
