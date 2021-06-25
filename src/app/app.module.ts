@@ -13,6 +13,8 @@ import { TokenInterceptorService } from './token-interceptor.service';
 import { ReservationsComponent } from './reservations/reservations.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatIconModule } from '@angular/material/icon'
+import { MatMenuModule } from '@angular/material/menu'
 import { MatTabsModule } from '@angular/material/tabs'
 import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -43,7 +45,9 @@ import { UsersComponent } from './users/users.component'
     BrowserAnimationsModule,
     MatTabsModule,
     MatDividerModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule,
+    MatMenuModule
   ],
   providers: [AuthService,
   {
