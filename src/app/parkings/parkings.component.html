@@ -1,0 +1,26 @@
+<div class="parkings">
+    <div class="parkingCard" *ngFor='let parking of parkings$ '>
+        <div class="p-content">
+            <div class="p-img">
+                <img src="http://localhost:3000/{{parking.parkingImage}}" alt="">
+            </div>
+            <div class="p-info">
+                <div class="p-title">{{parking.name}}</div>
+                <div class="p-desc">{{parking.description}}</div>
+                
+                
+            </div>
+        </div>
+        <div class="loc-spots">
+            <div >Location: Sidi Maarouf</div>
+                <mat-divider [vertical]="true"></mat-divider>
+            <div >Total Spots: {{parking.total_spots}}</div>
+        </div>
+        <div class="btns">
+            <button (click)='deleteParking(parking._id)' class="btn">Delete</button>
+            <button  class="btn">Edit</button>
+        </div>
+        
+
+    </div>
+</div>

@@ -71,5 +71,14 @@
     flex-direction: column;
     height: 100%;
     width: 100%;
+    align-items: center;
     
+}
+mat-tab-group {
+    width: 80%;
+}
+.parkings{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
 }

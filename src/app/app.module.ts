@@ -11,6 +11,11 @@ import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { ReservationsComponent } from './reservations/reservations.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatTabsModule } from '@angular/material/tabs'
+import { MatDividerModule } from '@angular/material/divider';
+import { ParkingsComponent } from './parkings/parkings.component'
 
 @NgModule({
   declarations: [
@@ -18,6 +23,8 @@ import { ReservationsComponent } from './reservations/reservations.component';
     DashboardComponent,
     LoginComponent,
     ReservationsComponent,
+    ParkingsComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -29,7 +36,10 @@ import { ReservationsComponent } from './reservations/reservations.component';
        component: DashboardComponent,
        canActivate: [AuthGuard] }
 
-    ])
+    ]),
+    BrowserAnimationsModule,
+    MatTabsModule,
+    MatDividerModule
   ],
   providers: [AuthService,
   {

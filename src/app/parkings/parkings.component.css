@@ -1,5 +1,5 @@
 
-.reservations{
+.parkings{
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;
@@ -15,7 +15,7 @@
     background-color: rgb(33, 33, 78);
     cursor: pointer;
 }
-.reservationCard{
+.parkingCard{
     display: flex;
     flex-direction: column;
     background-color: rgba(105, 105, 105, 0.045);
@@ -33,7 +33,7 @@
     font-size: 14px;
 
 }
-.reservationCard:hover{
+.parkingCard:hover{
     background-color: rgba(105, 105, 105, 0.1);
 }
 .p-content{
