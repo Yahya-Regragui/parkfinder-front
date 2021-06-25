@@ -3,20 +3,23 @@ import { Component, OnInit } from '@angular/core';
 import { HttpHeaders } from '@angular/common/http';
 import { Parking } from '../parking.model';
 import { AuthService } from '../auth.service';
-import { MatDialog } from '@angular/material/dialog';
-import { ParkingModalComponent } from '../parking-modal/parking-modal.component';
 
 @Component({
-  selector: 'app-parkings',
-  templateUrl: './parkings.component.html',
-  styleUrls: ['./parkings.component.css']
+  selector: 'app-parking-modal',
+  templateUrl: './parking-modal.component.html',
+  styleUrls: ['./parking-modal.component.css']
 })
-export class ParkingsComponent implements OnInit {
+export class ParkingModalComponent implements OnInit {
+
   parkings$: Parking[];
   apiUrl:string = 'http://localhost:3000/parkings/';
+
+
+
   headers = new HttpHeaders().set('Content-Type', 'application/json;charset=utf-8');
 
-  constructor(public _authService: AuthService ,private http: HttpClient, public dialog:MatDialog) { }
+
+  constructor(public _authService: AuthService ,private http: HttpClient) { }
 
   selectedFile:File = null;
 
@@ -44,22 +47,10 @@ export class ParkingsComponent implements OnInit {
     this.http.post(this.apiUrl, fd)
     .subscribe( res => {
       console.log(res);
+      window.location.reload();
     })
 }
 
-deleteParking(id){
-  let endpoint = this.apiUrl + '/' + id;
- this.http.delete(endpoint)
- .subscribe((result) =>{
-   console.warn(result)
-   window.location.reload();
- })
- 
-}
-
-openModal(){
-  this.dialog.open(ParkingModalComponent)
-}
 
 
 }

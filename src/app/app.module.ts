@@ -14,12 +14,21 @@ import { ReservationsComponent } from './reservations/reservations.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatIconModule } from '@angular/material/icon'
+import {MatDialogModule} from '@angular/material/dialog';
+
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatButtonModule } from '@angular/material/button'
 import { MatMenuModule } from '@angular/material/menu'
 import { MatTabsModule } from '@angular/material/tabs'
 import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ParkingsComponent } from './parkings/parkings.component';
-import { UsersComponent } from './users/users.component'
+import { UsersComponent } from './users/users.component';
+import { ParkingModalComponent } from './parking-modal/parking-modal.component';
+import { StatsComponent } from './stats/stats.component';
+import { LineChartComponent } from './line-chart/line-chart.component';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { BarChartComponent } from './bar-chart/bar-chart.component'
 
 @NgModule({
   declarations: [
@@ -29,8 +38,14 @@ import { UsersComponent } from './users/users.component'
     ReservationsComponent,
     ParkingsComponent,
     UsersComponent,
+    ParkingModalComponent,
+    StatsComponent,
+    LineChartComponent,
+    PieChartComponent,
+    BarChartComponent,
     
   ],
+  entryComponents: [ParkingModalComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -47,7 +62,10 @@ import { UsersComponent } from './users/users.component'
     MatDividerModule,
     MatToolbarModule,
     MatIconModule,
-    MatMenuModule
+    MatDialogModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatFormFieldModule
   ],
   providers: [AuthService,
   {

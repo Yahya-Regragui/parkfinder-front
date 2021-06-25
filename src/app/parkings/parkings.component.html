@@ -15,8 +15,9 @@
             <mat-icon color="primary">search</mat-icon>
             <input placeholder="Search for Parkings ..." type="text" name="search" id="search">
         </div>
+        <button id="create-pk" (click)="openModal()" class="btn">New Parking</button>
     </div>
-
+    
     <div class="parkings">
         <div class="pks">
             <div class="parkingCard" *ngFor='let parking of parkings$ '>

@@ -70,6 +70,12 @@ mat-icon{
     background-color: rgb(33, 33, 78);
     cursor: pointer;
 }
+#create-pk{
+    background-color: rgb(26, 122, 26);
+    height: 110%;
+    width: 100px;
+    margin-left: 30px;
+}
 .pks{
     display: flex;
 }
@@ -90,6 +96,7 @@ mat-icon{
 }
 .p-desc{
     font-size: 14px;
+    width: 200px;
 
 }
 .parkingCard:hover{
