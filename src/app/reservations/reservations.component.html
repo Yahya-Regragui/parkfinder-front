@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="get-test">
+        <h1>all reservations</h1>
+        <div class="parkingCard" *ngFor='let reservation of reservations$ '>
+            
+            <div class="p-info">
+                <div class="p-title">date: {{reservation.date}}</div>
+                <div class="p-desc">arrival Time: {{reservation.arrivalTime}}</div>
+                <div class="p-desc">departure Time: {{reservation.departureTime}}</div>
+                <div class="p-desc">parking Id: {{reservation.parkingId}}</div>
+                <div class="p-desc">car Number: {{reservation.carNumber}}</div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+</div>

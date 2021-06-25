@@ -3,9 +3,9 @@ import { HttpClient } from '@angular/common/http'
 import { Router } from '@angular/router'
 
 @Injectable()
-export class AuthService {
+export class AuthService  {
 
-  private _loginUrl = "http://localhost:3000/user/login";
+  private _loginUrl = "http://localhost:3000/user/admin/login";
 
   constructor(private http: HttpClient,
               private _router: Router) { }
@@ -27,4 +27,6 @@ export class AuthService {
   loggedIn() {
     return !!localStorage.getItem('token')    
   }
+
+
 }

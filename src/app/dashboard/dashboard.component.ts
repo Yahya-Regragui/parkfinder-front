@@ -4,11 +4,11 @@ import { HttpHeaders } from '@angular/common/http';
 import { Parking } from '../parking.model';
 import { AuthService } from '../auth.service';
 @Component({
-  selector: 'app-test',
-  templateUrl: './test.component.html',
-  styleUrls: ['./test.component.css']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
-export class TestComponent implements OnInit {
+export class DashboardComponent implements OnInit {
   parkings$: Parking[];
   apiUrl:string = 'http://localhost:3000/parkings/';
 
