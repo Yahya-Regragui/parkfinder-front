@@ -17,6 +17,7 @@ import { MatIconModule } from '@angular/material/icon'
 import {MatDialogModule} from '@angular/material/dialog';
 
 import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatTableModule } from '@angular/material/table'
 import { MatButtonModule } from '@angular/material/button'
 import { MatMenuModule } from '@angular/material/menu'
 import { MatTabsModule } from '@angular/material/tabs'
@@ -28,7 +29,8 @@ import { ParkingModalComponent } from './parking-modal/parking-modal.component';
 import { StatsComponent } from './stats/stats.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
-import { BarChartComponent } from './bar-chart/bar-chart.component'
+import { BarChartComponent } from './bar-chart/bar-chart.component';
+import { CagComponent } from './cag/cag.component'
 
 @NgModule({
   declarations: [
@@ -43,6 +45,7 @@ import { BarChartComponent } from './bar-chart/bar-chart.component'
     LineChartComponent,
     PieChartComponent,
     BarChartComponent,
+    CagComponent,
     
   ],
   entryComponents: [ParkingModalComponent],
@@ -65,7 +68,8 @@ import { BarChartComponent } from './bar-chart/bar-chart.component'
     MatDialogModule,
     MatMenuModule,
     MatButtonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatTableModule
   ],
   providers: [AuthService,
   {

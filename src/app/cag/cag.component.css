@@ -1,0 +1,13 @@
+.ca{
+    font-size: 50px;
+    color: red;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ca p{
+    color: #000000;
+    font-size: 25px;
+}
