@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { HttpHeaders } from '@angular/common/http';
 import { Parking } from '../parking.model';
 import { AuthService } from '../auth.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ParkingModalComponent } from '../parking-modal/parking-modal.component';
+import { EditParkingComponent } from '../edit-parking/edit-parking.component';
 
 @Component({
   selector: 'app-parkings',
@@ -12,6 +13,12 @@ import { ParkingModalComponent } from '../parking-modal/parking-modal.component'
   styleUrls: ['./parkings.component.css']
 })
 export class ParkingsComponent implements OnInit {
+
+  
+  message: string = "message"
+
+  @Output() messageEvent = new EventEmitter<string>();
+
   parkings$: Parking[];
   apiUrl:string = 'http://localhost:3000/parkings/';
   headers = new HttpHeaders().set('Content-Type', 'application/json;charset=utf-8');
@@ -59,6 +66,17 @@ deleteParking(id){
 
 openModal(){
   this.dialog.open(ParkingModalComponent)
+}
+editParking(parkingId, parkingName,parkingDesc,parkingLocY,parkingLocX,parkingTotalSpots){
+  this.dialog.open(EditParkingComponent, 
+    {data : {
+      parkingId: parkingId,
+      parkingName: parkingName,
+      parkingDesc: parkingDesc,
+      parkingLocY: parkingLocY,
+      parkingLocX: parkingLocX,
+      parkingTotalSpots: parkingTotalSpots,
+    }} )
 }
 
 

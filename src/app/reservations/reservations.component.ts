@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Parking } from '../parking.model';
 
@@ -17,13 +17,13 @@ import { Parking } from '../parking.model';
 export class ReservationsComponent implements OnInit {
 
   reservations$: Parking[];
-  apiUrl:string = 'http://localhost:3000/user/reservations/';
+  apiUrl:string = 'http://localhost:3000/user/admin/reservations/';
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'username'];
   dataSource = [];
 
   headers = new HttpHeaders().set('Content-Type', 'application/json;charset=utf-8');
-
+  
 
   constructor(public _authService: AuthService ,private http: HttpClient) { }
 

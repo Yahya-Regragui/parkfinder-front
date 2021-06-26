@@ -99,6 +99,9 @@ mat-icon{
     width: 200px;
 
 }
+#delete{
+    background-color: red;
+}
 .parkingCard:hover{
     background-color: rgba(105, 105, 105, 0.1);
 }

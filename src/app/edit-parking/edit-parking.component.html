@@ -1,0 +1,35 @@
+<h2 mat-dialog-title>Update Parking</h2>
+
+<mat-dialog-content>
+    <div class="post-test">
+        <form #parkingPost='ngForm' (ngSubmit)='onSubmit(parkingPost.value,data.parkingId)' class="create-article" >
+            <div class="usr-inp">
+                <label>Parking Name</label>
+                <input  type="text"  name="name" id="" ngModel="{{data.parkingName}}" >
+            </div>
+            
+            <div class="usr-inp">
+                <label>Location_x</label>
+                <input  type="text"  name="location_x" id="" ngModel="{{data.parkingLocX}}">
+            </div>
+            <div class="usr-inp">
+                <label>Location_y</label>
+                <input  type="text"  name="location_y" id="" ngModel="{{data.parkingLocY}}">
+            </div>
+            
+            <div class="usr-inp">
+                <label>Total Place</label>
+                <input  type="text"  name="totalPlace" id=""  ngModel="{{data.parkingTotalSpots}}">
+            </div>
+            <div  class="usr-inp" id="post-body">
+                <label>Description</label>
+                <textarea name="description"  id="" cols="30" rows="10" value="search" ngModel = "{{data.parkingDesc}}" ></textarea>
+            </div>
+            <mat-dialog-actions>
+                <button  type="submit" mat-button mat-dialog-close class="submit">Submit</button>
+                <button  type="button" mat-button mat-dialog-close >Close</button>
+
+            </mat-dialog-actions>
+        </form>
+    </div>
+</mat-dialog-content>

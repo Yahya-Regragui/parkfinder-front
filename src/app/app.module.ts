@@ -18,6 +18,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatTableModule } from '@angular/material/table'
+import { MatPaginatorModule } from '@angular/material/paginator'
 import { MatButtonModule } from '@angular/material/button'
 import { MatMenuModule } from '@angular/material/menu'
 import { MatTabsModule } from '@angular/material/tabs'
@@ -31,6 +32,7 @@ import { LineChartComponent } from './line-chart/line-chart.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { CagComponent } from './cag/cag.component'
+import { EditParkingComponent } from './edit-parking/edit-parking.component'
 
 @NgModule({
   declarations: [
@@ -46,9 +48,10 @@ import { CagComponent } from './cag/cag.component'
     PieChartComponent,
     BarChartComponent,
     CagComponent,
+    EditParkingComponent
     
   ],
-  entryComponents: [ParkingModalComponent],
+  entryComponents: [ParkingModalComponent, EditParkingComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -69,7 +72,8 @@ import { CagComponent } from './cag/cag.component'
     MatMenuModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [AuthService,
   {

@@ -13,7 +13,7 @@
         
         <div class="search-bar">
             <mat-icon color="primary">search</mat-icon>
-            <input placeholder="Search for Parkings ..." type="text" name="search" id="search">
+            <input placeholder="Search for Parkings ..." type="text" name="search"  id="search">
         </div>
         <button id="create-pk" (click)="openModal()" class="btn">New Parking</button>
     </div>
@@ -38,8 +38,8 @@
                     <div >Total Spots: {{parking.total_spots}}</div>
                 </div>
                 <div class="btns">
-                    <button (click)='deleteParking(parking._id)' class="btn">Delete</button>
-                    <button  class="btn">Edit</button>
+                    <button (click)='deleteParking(parking._id)' id="delete" class="btn">Delete</button>
+                    <button (click)="editParking(parking._id, parking.name,parking.description,parking.location_y,parking.location_x,parking.total_spots)" class="btn">Edit</button>
                 </div>
                 
         
