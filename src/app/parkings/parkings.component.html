@@ -1,7 +1,7 @@
 <div class="container">
     <div class="search">
         <div mat-button [matMenuTriggerFor]="menu" class="filter">
-           <span>Filter</span> 
+           <span>filtrer</span> 
            <mat-icon color="primary">expand_more</mat-icon>
            <mat-menu #menu="matMenu">
             <button class="menu-item" mat-menu-item>Maarif</button>
@@ -12,10 +12,10 @@
         </div>
         
         <div class="search-bar">
-            <mat-icon color="primary">search</mat-icon>
-            <input placeholder="Search for Parkings ..." type="text" name="search"  id="search">
+            <mat-icon color="primary">rechercher</mat-icon>
+            <input placeholder="Rechercher des parkings ..." type="text" name="search"  id="search">
         </div>
-        <button id="create-pk" (click)="openModal()" class="btn">New Parking</button>
+        <button id="create-pk" (click)="openModal()" class="btn">nouveau parking</button>
     </div>
     
     <div class="parkings">
@@ -33,13 +33,13 @@
                     </div>
                 </div>
                 <div class="loc-spots">
-                    <div >Location: Sidi Maarouf</div>
+                    <div >emplacement: Sidi Maarouf</div>
                         <mat-divider [vertical]="true"></mat-divider>
-                    <div >Total Spots: {{parking.total_spots}}</div>
+                    <div >Nombre de places: {{parking.total_spots}}</div>
                 </div>
                 <div class="btns">
-                    <button (click)='deleteParking(parking._id)' id="delete" class="btn">Delete</button>
-                    <button (click)="editParking(parking._id, parking.name,parking.description,parking.location_y,parking.location_x,parking.total_spots)" class="btn">Edit</button>
+                    <button (click)='deleteParking(parking._id)' id="delete" class="btn">supprimer</button>
+                    <button (click)="editParking(parking._id, parking.name,parking.description,parking.location_y,parking.location_x,parking.total_spots)" class="btn">modifier</button>
                 </div>
                 
         

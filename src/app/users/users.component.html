@@ -1,7 +1,7 @@
 
 
 <div class="reservations">
-    <h1>All Users</h1>
+    <h1>Tous les utilisateurs</h1>
     <div class="reservationCard" *ngFor='let user of users$ '>
         <div class="card-content">
 
@@ -16,14 +16,14 @@
                 </div>
             </div>
             <div class="loc-spots">
-                <div >Phone: {{user.phone}}</div>
+                <div >Numéro de téléphone: {{user.phone}}</div>
                     <mat-divider [vertical]="true"></mat-divider>
-                <div >Account Status: <strong style="color: rgb(182, 37, 37);" *ngIf = 'user.isBlocked '>Blocked</strong> <strong style="color: green;" *ngIf = '!user.isBlocked '>Activated</strong> </div>
+                <div >Statut du compte: <strong style="color: rgb(182, 37, 37);" *ngIf = 'user.isBlocked '>Bloqué</strong> <strong style="color: green;" *ngIf = '!user.isBlocked '>Activé</strong> </div>
             </div>
          </div>
         
         
-        <button (click) = 'blockUser(user._id)' *ngIf = '!user.isBlocked && !user.isAdmin' class="btn" id="block">Block</button>
-        <button (click) = 'activateUser(user._id)' *ngIf = 'user.isBlocked ' class="btn" id="unblock">unblock</button>
+        <button (click) = 'blockUser(user._id)' *ngIf = '!user.isBlocked && !user.isAdmin' class="btn" id="block">Bloquer</button>
+        <button (click) = 'activateUser(user._id)' *ngIf = 'user.isBlocked ' class="btn" id="unblock">Débloquer</button>
     </div>
 </div>

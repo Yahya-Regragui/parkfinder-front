@@ -53,7 +53,7 @@
 <div class="container">
     <mat-toolbar>
         <h1 class="logo">Park<span>Finder</span> </h1>
-        <button class="logout" (click)="_authService.logoutUser()" >Log out</button>
+        <button class="logout" (click)="_authService.logoutUser()" >Se déconnecter</button>
     </mat-toolbar>
     <mat-tab-group mat-align-tabs="center"  animationDuration="0ms">
 
@@ -61,14 +61,14 @@
             <app-parkings></app-parkings>
         </mat-tab>
 
-        <mat-tab label="Reservations">
+        <mat-tab label="Réservations">
              <app-reservations></app-reservations>
         </mat-tab>
         
-        <mat-tab label="Users"> 
+        <mat-tab label="Utilisateurs"> 
             <app-users></app-users>
         </mat-tab>
-        <mat-tab label="Stats"> 
+        <mat-tab label="Statistiques"> 
             <app-stats></app-stats>
         </mat-tab>
 
