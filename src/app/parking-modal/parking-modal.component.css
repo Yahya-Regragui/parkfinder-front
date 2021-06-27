@@ -1,4 +1,16 @@
+.container{
+    width: 400px;
+}
 .usr-inp{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    height: 30px;
+    outline: none;
+}
+.p-image label {
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
 }

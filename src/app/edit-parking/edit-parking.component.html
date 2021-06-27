@@ -3,28 +3,28 @@
 <mat-dialog-content>
     <div class="post-test">
         <form #parkingPost='ngForm' (ngSubmit)='onSubmit(parkingPost.value,data.parkingId)' class="create-article" >
-            <div class="usr-inp">
-                <label>Parking Name</label>
-                <input  type="text"  name="name" id="" ngModel="{{data.parkingName}}" >
-            </div>
+            <mat-form-field class="usr-inp">
+                <mat-label>Parking Name</mat-label>
+                <input  matInput type="text"  name="name" id="" ngModel="{{data.parkingName}}" >
+            </mat-form-field>
             
-            <div class="usr-inp">
-                <label>Location_x</label>
-                <input  type="text"  name="location_x" id="" ngModel="{{data.parkingLocX}}">
-            </div>
-            <div class="usr-inp">
-                <label>Location_y</label>
-                <input  type="text"  name="location_y" id="" ngModel="{{data.parkingLocY}}">
-            </div>
+            <mat-form-field class="usr-inp">
+                <mat-label>Location_x</mat-label>
+                <input  matInput type="text"  name="location_x" id="" ngModel="{{data.parkingLocX}}">
+            </mat-form-field>
+            <mat-form-field class="usr-inp">
+                <mat-label>Location_y</mat-label>
+                <input  matInput type="text"  name="location_y" id="" ngModel="{{data.parkingLocY}}">
+            </mat-form-field>
             
-            <div class="usr-inp">
-                <label>Total Place</label>
-                <input  type="text"  name="totalPlace" id=""  ngModel="{{data.parkingTotalSpots}}">
-            </div>
-            <div  class="usr-inp" id="post-body">
-                <label>Description</label>
-                <textarea name="description"  id="" cols="30" rows="10" value="search" ngModel = "{{data.parkingDesc}}" ></textarea>
-            </div>
+            <mat-form-field class="usr-inp">
+                <mat-label>Total Place</mat-label>
+                <input  matInput type="text"  name="totalPlace" id=""  ngModel="{{data.parkingTotalSpots}}">
+            </mat-form-field>
+            <mat-form-field  class="usr-inp" id="post-body">
+                <mat-label>Description</mat-label>
+                <textarea matInput name="description"  id="" cols="30" rows="10" value="search" ngModel = "{{data.parkingDesc}}" ></textarea>
+            </mat-form-field>
             <mat-dialog-actions>
                 <button  type="submit" mat-button mat-dialog-close class="submit">Submit</button>
                 <button  type="button" mat-button mat-dialog-close >Close</button>

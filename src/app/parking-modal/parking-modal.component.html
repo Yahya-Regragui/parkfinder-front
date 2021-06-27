@@ -1,38 +1,46 @@
-<h2 mat-dialog-title>Create a new parking!</h2>
-<mat-dialog-content>
-    <div class="post-test">
-        <form #parkingPost='ngForm' (ngSubmit)='onSubmit(parkingPost.value)' class="create-article" >
-            <div class="usr-inp">
-                <label>Parking Name</label>
-                <input  type="text" ngModel name="name" id="" >
-            </div>
-            
-            <div class="usr-inp">
-                <label>Location_x</label>
-                <input  type="text" ngModel name="location_x" id="" >
-            </div>
-            <div class="usr-inp">
-                <label>Location_y</label>
-                <input  type="text" ngModel name="location_y" id="" >
-            </div>
-            <div class="usr-inp">
-                <label>Image</label>
-                <input  type="file" ngModel name="parkingImage" (change)="onFileSelected($event)" >
-            </div>
-            <div class="usr-inp">
-                <label>Total Place</label>
-                <input  type="text" ngModel name="totalPlace" id="" >
-            </div>
-            <div  class="usr-inp" id="post-body">
-                <label>Description</label>
-                <textarea name="description" ngModel id="" cols="30" rows="10" ></textarea>
-            </div>
-            <mat-dialog-actions>
-                <button  type="submit" mat-button mat-dialog-close class="submit">Submit</button>
-                <button  type="button" mat-button mat-dialog-close >Close</button>
+<div class="container">
+    <h2 mat-dialog-title>Créez un nouveau parking !</h2>
 
-            </mat-dialog-actions>
-        </form>
-    </div>
-</mat-dialog-content>
+
+
+    <mat-dialog-content>
+        <div class="post-test">
+            <form #parkingPost='ngForm' (ngSubmit)='onSubmit(parkingPost.value)' class="create-article" >
+                
+                <mat-form-field class="usr-inp">
+                    <mat-label>Nom du parking</mat-label>
+                    <input matInput  type="text" ngModel name="name" id="" >
+                </mat-form-field>
+                
+                
+                <mat-form-field class="usr-inp">
+                    <mat-label>Location_x</mat-label>
+                    <input matInput type="text" ngModel name="location_x" id="" >
+                </mat-form-field>
+                <mat-form-field class="usr-inp">
+                    <mat-label>Location_y</mat-label>
+                    <input matInput type="text" ngModel name="location_y" id="" >
+                </mat-form-field>
+                <div class="p-image">
+                    <label>Image du parking</label>
+                    <input  type="file" ngModel name="parkingImage" (change)="onFileSelected($event)" >
+                </div>
+                <mat-form-field class="usr-inp">
+                    <mat-label>nombre total de places</mat-label>
+                    <input matInput type="text" ngModel name="totalPlace" id="" >
+                </mat-form-field>
+                <mat-form-field  class="usr-inp" id="post-body">
+                    <mat-label>Description</mat-label>
+                    <textarea matInput name="description" ngModel id="" cols="30" rows="10" ></textarea>
+                </mat-form-field>
+                <mat-dialog-actions>
+                    <button  type="submit" mat-button mat-dialog-close class="submit">Submit</button>
+                    <button  type="button" mat-button mat-dialog-close >Close</button>
+    
+                </mat-dialog-actions>
+            </form>
+        </div>
+    </mat-dialog-content>
+    
+</div>
 
