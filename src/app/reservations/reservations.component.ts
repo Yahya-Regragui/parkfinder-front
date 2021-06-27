@@ -3,7 +3,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Parking } from '../parking.model';
 
-
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 
 
 @Component({
@@ -16,11 +17,13 @@ import { Parking } from '../parking.model';
 
 export class ReservationsComponent implements OnInit {
 
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
   reservations$: Parking[];
   apiUrl:string = 'http://localhost:3000/user/admin/reservations/';
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'username'];
-  dataSource = [];
+  dataSource: any = [];
 
   headers = new HttpHeaders().set('Content-Type', 'application/json;charset=utf-8');
   
@@ -33,7 +36,9 @@ export class ReservationsComponent implements OnInit {
     return  this.http.get<any>(this.apiUrl).subscribe(
       data => {
         this.dataSource = data
-        console.log(this.dataSource)
+        this.dataSource = new MatTableDataSource(data)
+        this.dataSource.paginator = this.paginator
+        
       });
       
   }
