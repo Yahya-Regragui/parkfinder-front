@@ -7,6 +7,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { ParkingModalComponent } from '../parking-modal/parking-modal.component';
 import { EditParkingComponent } from '../edit-parking/edit-parking.component';
 
+
+
 @Component({
   selector: 'app-parkings',
   templateUrl: './parkings.component.html',
@@ -17,9 +19,9 @@ export class ParkingsComponent implements OnInit {
   
   message: string = "message"
 
-  @Output() messageEvent = new EventEmitter<string>();
 
   parkings$: Parking[];
+  
   apiUrl:string = 'http://localhost:3000/parkings/';
   headers = new HttpHeaders().set('Content-Type', 'application/json;charset=utf-8');
 
@@ -29,9 +31,15 @@ export class ParkingsComponent implements OnInit {
 
   ngOnInit() {
     return  this.http.get<any>(this.apiUrl).subscribe(
-      data => {this.parkings$ = data});
+      data => {
+        this.parkings$ = data
+
+      
+      });
       
   }
+
+
 
   onFileSelected(event){
     this.selectedFile =  <File>event.target.files[0];
